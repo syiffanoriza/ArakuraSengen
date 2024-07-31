@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kosugi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kosugi+Maru&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Urbanist', Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --black: #14110D;
+    --white: #FCFCFC;
+    --red: #D20101;
+    --red-20: #3E1821;
+    --orange: #E54702;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+a {
+    text-decoration: none;
+}
+
+.jp {
+    font-family: 'Kosugi Maru';
+}
+
+.jumbotron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    scroll-snap-align: start;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url('/assets/chureito-pagoda-svetlana-gumerova.jpg');
+}
+
+.jumbotron__text {
+    font-size: 12vw;
+}
+
+.nav-bar {
+    display: flex;
+    padding: 1vh 4vw;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    justify-content: space-between;
+    background-color: var(--black);
+    box-shadow: 0 -20px 20px 20px var(--black);
+}
+
+.nav-bar__title {
+    color: var(--red);
+    font-size: 2rem;
+}
+
+.links {
+    display: flex;
+    color: var(--white);
+    align-items: center;
+    gap: 1vw;
+}
+
+.button {
+    padding: 1vh 2vw;
+    color: var(--red);
+    font-size: 1rem;
+    font-weight: 600;
+    width: fit-content;
+    user-select: none;
+    border: solid 1px var(--red);
+    transition-duration: 150ms;
+}
+
+.button:hover {
+    cursor: pointer;
+    border: solid 1px var(--red-20);
+    background-color: var(--red-20);
+    transition-duration: 150ms;
+}
+
+section {
+    display: flex;
+    padding: 4vw;
+    height: fit-content;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+section.reversed {
+    flex-direction: row-reverse;
+}
+
+.section-image {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.divider {
+    height: 40vh;
+    width: auto;
+}
+
+.section-image__asset {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#overview .section-image__asset {
+    background-image: url('/assets/chureito-pagoda-2-svetlana-gumerova.jpg');
+}
+
+#history .section-image__asset {
+    background-position: right bottom;
+    background-image: url('/assets/torri-weiqi-xiong.jpg');
+}
+
+#fuji-div .section-image__asset {
+    background-size: cover;
+    background-position: bottom;
+    background-image: url('/assets/fuji-svetlana-gumerova.jpg');
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 10vh 20vh;
+}
+
+.section-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+.section-title__top {
+    color: var(--orange);
+}
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4vw;
+    width: 100%;
+}
+
+.train.divider {
+    display: flex;
+    justify-content: end;
+    height: fit-content;
+    padding: 4vw 0;
+    background-color: var(--red);
+}
+
+.train__asset {
+    animation: slide linear;
+    animation-timeline: view();
+    animation-range: entry forwards;
+}
+
+#tickets .section-text {
+    align-items: center;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 4vw;
+    background-color: var(--red);
+}
+
+.link__arrow {
+    height: 12px;
+    width: 12px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    @keyframes fade-in {
+        to { opacity: 100%; }
+    }
+
+    @keyframes slide {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    }
+}
+  
+@media (max-width: 1024px) {
+    .jumbotron {
+        height: 80vh;
+    }
+
+    .nav-bar__title {
+        display: none;
+    }
+
+    .section-image {
+        height: 25vh;
+    }
+
+    section {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    section.reversed {
+        flex-direction: column-reverse;
+    }
+
+    section#tickets {
+        padding: 20vh 4vw;
+    }
+
+    footer {
+        padding: 4vw;
+        flex-direction: column;
+    }
+}
