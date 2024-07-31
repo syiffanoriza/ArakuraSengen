@@ -4,4 +4,4 @@ A landing page made to test out my knowledge in bringing life and meaning to a s
 
 ## Reference
 
-![KAMUI](https://cdn.dribbble.com/users/1846841/screenshots/11180781/media/e7b7fe014bab8608ff42779595017e7e.mp4)
+https://github.com/user-attachments/assets/b3fc7a8e-1e67-4492-9023-8439c47091cf
