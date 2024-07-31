@@ -41,7 +41,7 @@ a {
     scroll-snap-align: start;
     background-attachment: fixed;
     background-size: cover;
-    background-image: url('assets/chureito-pagoda-svetlana-gumerova.jpg');
+    background-image: url('../assets/chureito-pagoda-svetlana-gumerova.jpg');
 }
 
 .jumbotron__text {
@@ -123,18 +123,18 @@ section.reversed {
 }
 
 #overview .section-image__asset {
-    background-image: url('assets/chureito-pagoda-2-svetlana-gumerova.jpg');
+    background-image: url('../assets/chureito-pagoda-2-svetlana-gumerova.jpg');
 }
 
 #history .section-image__asset {
     background-position: right bottom;
-    background-image: url('assets/torri-weiqi-xiong.jpg');
+    background-image: url('../assets/torri-weiqi-xiong.jpg');
 }
 
 #fuji-div .section-image__asset {
     background-size: cover;
     background-position: bottom;
-    background-image: url('assets/fuji-svetlana-gumerova.jpg');
+    background-image: url('../assets/fuji-svetlana-gumerova.jpg');
 }
 
 .fade-in {
