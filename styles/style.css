@@ -22,7 +22,6 @@ body {
 
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
 }
 
 a {
@@ -38,10 +37,8 @@ a {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    scroll-snap-align: start;
     background-attachment: fixed;
     background-size: cover;
-    background-image: url('/../assets/chureito-pagoda-svetlana-gumerova.jpg');
 }
 
 .jumbotron__text {
@@ -95,7 +92,6 @@ section {
     padding: 4vw;
     height: fit-content;
     align-items: center;
-    scroll-snap-align: start;
 }
 
 section.reversed {
@@ -120,21 +116,6 @@ section.reversed {
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-#overview .section-image__asset {
-    background-image: url('/../assets/chureito-pagoda-2-svetlana-gumerova.jpg');
-}
-
-#history .section-image__asset {
-    background-position: right bottom;
-    background-image: url('/../assets/torri-weiqi-xiong.jpg');
-}
-
-#fuji-div .section-image__asset {
-    background-size: cover;
-    background-position: bottom;
-    background-image: url('/../assets/fuji-svetlana-gumerova.jpg');
 }
 
 .fade-in {
