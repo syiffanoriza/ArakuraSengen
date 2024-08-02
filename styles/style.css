@@ -171,9 +171,9 @@ section.reversed {
 }
 
 .train__asset {
-    animation: slide linear;
+    animation: slide linear forwards;
     animation-timeline: view();
-    animation-range: entry forwards;
+    animation-range: contain;
 }
 
 #tickets .section-text {
@@ -228,6 +228,10 @@ footer {
 
     section#tickets {
         padding: 20vh 4vw;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
     }
 
     footer {
