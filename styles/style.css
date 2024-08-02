@@ -11,7 +11,7 @@
     --black: #14110D;
     --white: #FCFCFC;
     --red: #D20101;
-    --red-20: #3E1821;
+    --red-10: #270F0C;
     --orange: #E54702;
 }
 
@@ -42,12 +42,12 @@ a {
 }
 
 .jumbotron__text {
-    font-size: 12vw;
+    font-size: 8vw;
 }
 
 .nav-bar {
     display: flex;
-    padding: 1vh 4vw;
+    padding: 2vh 4vw;
     align-items: center;
     position: sticky;
     top: 0;
@@ -82,14 +82,15 @@ a {
 
 .button:hover {
     cursor: pointer;
-    border: solid 1px var(--red-20);
-    background-color: var(--red-20);
+    border: solid 1px var(--red-10);
+    background-color: var(--red-10);
     transition-duration: 150ms;
 }
 
 section {
     display: flex;
     padding: 4vw;
+    gap: 4vw;
     height: fit-content;
     align-items: center;
 }
@@ -103,6 +104,22 @@ section.reversed {
     width: 100%;
     height: 50vh;
     overflow: hidden;
+}
+
+#overview .section-image__asset {
+    background-image: url(../assets/chureito-pagoda-2-svetlana-gumerova.jpg);
+    background-position: left center;
+}
+
+#fuji .section-image__asset {
+    background-image: url(../assets/fuji-svetlana-gumerova.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#history .section-image__asset {
+    background-image: url(../assets/torri-weiqi-xiong.jpg);
+    background-position: 97% bottom;
 }
 
 .divider {
@@ -138,8 +155,9 @@ section.reversed {
 .section-text {
     display: flex;
     flex-direction: column;
+    text-align: justify;
     gap: 2rem;
-    padding: 4vw;
+    padding: 4vw 0;
     width: 100%;
 }
 
