@@ -39,6 +39,7 @@ a {
     height: 100vh;
     background-attachment: fixed;
     background-size: cover;
+    background-image: url(../assets/chureito-pagoda-svetlana-gumerova.jpg);
 }
 
 .jumbotron__text {
